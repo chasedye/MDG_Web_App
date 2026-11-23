@@ -1,13 +1,17 @@
 import NavBar from "./components/NavBar/AdminNavBar"
-import VideoStream from "./pages/VideoStream/VideoStream";
+import VideoSearchPage from "./components/StreamSearchView/StreamSearchView";
+import '@mantine/core/styles.css'
+import { MantineProvider } from "@mantine/core";
 import './App.css'
 
 function App() {
 
   return (
     <div>
+      <MantineProvider>
       <NavBar />
-      <VideoStream />
+      <VideoSearchPage />
+      </MantineProvider>
     </div>
   );
 }

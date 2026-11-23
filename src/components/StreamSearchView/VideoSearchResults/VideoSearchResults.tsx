@@ -1,8 +1,11 @@
 import type { videoProps } from "./VideoObject/VideoObject"
 import VideoObject from "./VideoObject/VideoObject"
 
+export type VideoResultsProps = {
+    searchResults: videoProps[];
+}
 
-export default function VideoSearchResults(searchResults: videoProps[]) {
+export default function VideoSearchResults({searchResults}: VideoResultsProps){
     if (searchResults.length == 0){
         return(
             <div className="emptyResults">
@@ -12,14 +15,15 @@ export default function VideoSearchResults(searchResults: videoProps[]) {
             </div>
         );
     }
-    const video_list = searchResults.map(
-        (item) => 
-           VideoObject(item)
-        ).join("");
     
     return (
         <div className="videoSearchResultsBase">
-            < div className="list">{video_list}</div>
+            < div className="list">
+                {searchResults.map(
+                    (item, i) => (
+                        <VideoObject key={i} {...item} />
+                    ))}
+            </div>
         </div>
     );
 }
