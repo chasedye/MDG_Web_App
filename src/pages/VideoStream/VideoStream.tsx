@@ -1,5 +1,5 @@
 import "./VideoStream.css";
-import VideoObject from "../../components/StreamSearchView/VideoSearchResults/VideoObject/VideoObject";
+import VideoObject from "../../components/VideoObject/VideoObject";
 function VideoStream() {
 
   return (

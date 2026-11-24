@@ -1,5 +1,5 @@
-import type { videoProps } from "./VideoObject/VideoObject"
-import VideoObject from "./VideoObject/VideoObject"
+import type { videoProps } from "../VideoObject/VideoObject"
+import VideoObject from "../VideoObject/VideoObject"
 
 export type VideoResultsProps = {
     searchResults: videoProps[];

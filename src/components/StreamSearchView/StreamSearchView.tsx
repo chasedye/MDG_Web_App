@@ -1,6 +1,6 @@
-import type {videoProps} from "./VideoSearchResults/VideoObject/VideoObject"
-import VideoSearchResults from "./VideoSearchResults/VideoSearchResults";
-import SearchBar, { type Query } from "./SearchBar";
+import type {videoProps} from "../VideoObject/VideoObject"
+import VideoSearchResults from "../VideoSearchResults/VideoSearchResults";
+import SearchBar, { type Query } from "../VideoSearchBar/VideoSearchBar";
 import { useState } from "react";
 
 

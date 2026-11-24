@@ -1,5 +1,5 @@
 import "./VideoObject.css";
-import VideoPlayerObject from "../../../VideoPlayer/VideoPlayer"
+import VideoPlayerObject from "../VideoPlayer/VideoPlayer"
 
 export type videoProps = {
         vid_name: string;
