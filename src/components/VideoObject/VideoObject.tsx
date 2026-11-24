@@ -1,4 +1,4 @@
-import "./VideoObject.css";
+import "./VideoObject.modules.css";
 import VideoPlayerObject from "../VideoPlayer/VideoPlayer"
 
 export type videoProps = {

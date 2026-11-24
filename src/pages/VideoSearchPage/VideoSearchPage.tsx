@@ -1,6 +1,7 @@
-import type {videoProps} from "../VideoObject/VideoObject"
-import VideoSearchResults from "../VideoSearchResults/VideoSearchResults";
-import SearchBar, { type Query } from "../VideoSearchBar/VideoSearchBar";
+import type {videoProps} from "../../components/VideoObject/VideoObject"
+import VideoSearchResults from "../../components/VideoSearchResults/VideoSearchResults";
+import SearchBar, { type Query } from "../../components/VideoSearchBar/VideoSearchBar"
+import "./VideoSearchPage.modules.css"
 import { useState } from "react";
 
 
@@ -34,9 +35,9 @@ export default function VideoSearchPage() {
     }
 
     return(
-        <div className="searchPage">
-            <SearchBar onSearch={handleQuery}/>
+        <section className="page">
+            <SearchBar onSearch={handleQuery} />
             <VideoSearchResults searchResults={results}/>
-        </div>
+        </section>
     );
 }

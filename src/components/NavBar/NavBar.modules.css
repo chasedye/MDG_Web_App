@@ -1,35 +1,7 @@
-/*
-Without Flex
-
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;              /* prevents list items going outside of list 
-    background-color: #333333;   /* adds black background to <ul> element 
-}
-
-ul li {
-    float: left;                    /* makes <li> elements float next to each other                     
-}
-
-
-ul li a {
-    display: block;                 /* allows us to specify padding, height, width and margins to <a> 
-    color: white;
-    text-align: center;
-    padding: 14px 16px;             /* add padding between each <a> element 
-    text-decoration: none;          /* removes underline from links 
-}
-
-u li a:hover {
-    background-color: #111111;
-}
-    */
-
-
 .navbar {
+    width: 100%;
+    flex: 0 0 auto;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     background-color: #333333;

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { DatePicker } from '@mantine/dates';
+import "./VideoSearchBar.modules.css"
 
 export interface Query {
     start_date?: string | null;
@@ -36,24 +37,30 @@ export default function SearchBar({ onSearch } : SearchBarProps) {
     }
 
     return(
-        <div className="searchBar">
+        <section className="searchBar">
             <form onSubmit={handleSubmit}>
-                <label>
-                    Search by name<input value={searchName} onChange={(e) => setSearchName(e.target.value)} name="searchName" className="searchName"/>
-                </label>
-                <div className='searchFilter'>
-                    <label>
-                        From<DatePicker className='startDate' allowDeselect value={startDate} onChange={setStartDate} />;
-                        <input name="startDate" />
+                <div className='inputBox'>
+                    <label >
+                        Search by name<input value={searchName} onChange={(e) => setSearchName(e.target.value)} name="searchName" />
                     </label>
-                    <label>
-                        To<DatePicker className='endDate' allowDeselect value={endDate} onChange={setEndDate} />;
-                        <input name='endDate' />
-                    </label>
+                </div>
+                <div className='filter'>
+                    <div className='startInput'>
+                        <label>
+                            From<DatePicker className='startDate' allowDeselect value={startDate} onChange={setStartDate} />;
+                            <input name="startDate" />
+                        </label>
+                    </div>
+                    <div className='endInput'>
+                        <label>
+                            To<DatePicker className='endDate' allowDeselect value={endDate} onChange={setEndDate} />;
+                            <input name='endDate' />
+                        </label>
+                    </div>
                 </div>
                 <button type="submit" className="searchBtn" onSubmit={handleSubmit}>Submit</button>
             </form>
-        </div>
+        </section>
     )
 
 }

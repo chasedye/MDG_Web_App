@@ -1,18 +1,18 @@
 import NavBar from "./components/NavBar/AdminNavBar"
-import VideoSearchPage from "./components/StreamSearchView/StreamSearchView";
+import VideoSearchPage from "./pages/VideoSearchPage/VideoSearchPage";
 import '@mantine/core/styles.css'
 import { MantineProvider } from "@mantine/core";
-import './App.css'
+import "./App.css"
 
 function App() {
 
   return (
-    <div>
+    <main>
       <MantineProvider>
       <NavBar />
       <VideoSearchPage />
       </MantineProvider>
-    </div>
+    </main>
   );
 }
 

@@ -1,4 +1,4 @@
-import "./NavBar.css"
+import "./NavBar.modules.css"
 
 
 const Navbar = () => {
