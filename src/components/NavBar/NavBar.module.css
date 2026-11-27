@@ -16,7 +16,11 @@
     padding: 10px;
 }
 
-
+.nav-links button {
+    background-color: black;
+    border: 2px solid;
+    border-color: white;
+}
 
 .nav-links button:hover {
     background-color: var(--mdg-light-purple);

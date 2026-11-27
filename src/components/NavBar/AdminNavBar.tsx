@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./NavBar.module.css";
 
 
@@ -8,25 +9,25 @@ const Navbar = () => {
 
                 <button className={`${styles['nav-links']}`}>
                     <li>
-                        <a className={`${styles['nav-links']}`} href="/upload">Upload</a>
+                        <Link to="/upload" className={`${styles['nav-links']}`} >Upload</Link>
                     </li>
                 </button>
 
                 <ul className={`${styles['nav-links']}`}>
                     <li>
-                        <a className={`${styles['nav-links']}`} href="/search">Search</a>
+                        <Link className={`${styles['nav-links']}`} to="/search">Search</Link>
                     </li>
                 </ul>
 
                 <ul className={`${styles['nav-links']}`}>
                     <li>
-                        <a className={`${styles['nav-links']}`} href="/calendar">Calender</a>
+                        <Link className={`${styles['nav-links']}`} to="/calendar">Calender</Link>
                     </li>
                 </ul>
 
                 <ul className={`${styles['nav-links']}`}>
                     <li>
-                        <a className={`${styles['nav-links']}`}href="/stats">Gym Stats</a>
+                        <Link className={`${styles['nav-links']}`} to="/stats">Gym Stats</Link>
                     </li>
                 </ul>
             </div>
