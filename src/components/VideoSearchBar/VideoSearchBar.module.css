@@ -1,37 +1,50 @@
 
+section {
+    display: flex;
+    align-items: center;
+    max-height: 3.5rem;
+}
+
 .searchBar {
     background-color: rgb(192, 192, 237);
     display: grid;
-    grid-template-columns: 3fr 2f 1fr;
-    grid-row: auto;
+    flex: 0 0 auto;
+    grid-template-columns: 5fr 1fr 1fr;
+    max-height: 3.5rem;
+    height: 3.5rem;
+    width: 100%;
 }
 
 
 .inputBox {
-    grid-column: 1;
+    grid-column-start: 1;
     display: flex;
-    width: 30em;
     background-color: brown;
 }
 
 .filter {
-    grid-column: 2;
+    grid-column-start: 2;
+    display: grid;
+    flex: 1 0 auto;
+    grid-template-columns: 1fr 1fr;
 }
 
 .startInput {
-    grid-column: 1;
+    grid-column-start: 1;
     display: flex;
     background-color: blueviolet;
     height: 50%;
 }
 
 .endInput {
-    grid-column: 2;
+    grid-column-start: 2;
     display: flex;
     background-color: rgb(43, 226, 144);
 }
 
 .searchBtn {
-    grid-column: 3;
+    grid-column-start: 3;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }

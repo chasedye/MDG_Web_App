@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { DatePicker } from '@mantine/dates';
-import "./VideoSearchBar.module.css"
+import { DatePickerInput } from '@mantine/dates';
+import style from "./VideoSearchBar.module.css"
 
 export interface Query {
     start_date?: string | null;
@@ -37,28 +37,19 @@ export default function SearchBar({ onSearch } : SearchBarProps) {
     }
 
     return(
-        <section className="searchBar">
-            <form onSubmit={handleSubmit}>
-                <div className='searchbar inputBox'>
+        <section >
+            <form onSubmit={handleSubmit} className={`${style.searchBar}`}>
+                <div className={`${style.inputBox}`}>
                     <label >
                         Search by name<input value={searchName} onChange={(e) => setSearchName(e.target.value)} name="searchName" />
                     </label>
                 </div>
-                <div className='searchbar filter'>
-                    <div className='searchbar filter startInput'>
-                        <label>
-                            From<DatePicker allowDeselect value={startDate} onChange={setStartDate} />;
-                            <input name="startDate" />
-                        </label>
-                    </div>
-                    <div className='searchbar filter endInput'>
-                        <label>
-                            To<DatePicker  allowDeselect value={endDate} onChange={setEndDate} />;
-                            <input name='endDate' />
-                        </label>
-                    </div>
+                <div className={`${style.filter}`}>
+                    <DatePickerInput label="From" clearable value={startDate} onChange={setStartDate} />
+                    <DatePickerInput label="To" clearable value={endDate} onChange={setEndDate} />
+                   
                 </div>
-                <button type="submit" className="searchbar searchBtn" onSubmit={handleSubmit}>Submit</button>
+                <button type="submit" className={`${style.searchBtn}`} onSubmit={handleSubmit}>Submit</button>
             </form>
         </section>
     )

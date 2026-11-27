@@ -1,5 +1,7 @@
 
 .videoSearchPage {
     background-color: aqua;
+    display: grid;
+    grid-row: auto 1fr;
     
 }
