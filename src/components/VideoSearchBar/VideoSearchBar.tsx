@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { DatePicker } from '@mantine/dates';
-import "./VideoSearchBar.modules.css"
+import "./VideoSearchBar.module.css"
 
 export interface Query {
     start_date?: string | null;
@@ -39,26 +39,26 @@ export default function SearchBar({ onSearch } : SearchBarProps) {
     return(
         <section className="searchBar">
             <form onSubmit={handleSubmit}>
-                <div className='inputBox'>
+                <div className='searchbar inputBox'>
                     <label >
                         Search by name<input value={searchName} onChange={(e) => setSearchName(e.target.value)} name="searchName" />
                     </label>
                 </div>
-                <div className='filter'>
-                    <div className='startInput'>
+                <div className='searchbar filter'>
+                    <div className='searchbar filter startInput'>
                         <label>
-                            From<DatePicker className='startDate' allowDeselect value={startDate} onChange={setStartDate} />;
+                            From<DatePicker allowDeselect value={startDate} onChange={setStartDate} />;
                             <input name="startDate" />
                         </label>
                     </div>
-                    <div className='endInput'>
+                    <div className='searchbar filter endInput'>
                         <label>
-                            To<DatePicker className='endDate' allowDeselect value={endDate} onChange={setEndDate} />;
+                            To<DatePicker  allowDeselect value={endDate} onChange={setEndDate} />;
                             <input name='endDate' />
                         </label>
                     </div>
                 </div>
-                <button type="submit" className="searchBtn" onSubmit={handleSubmit}>Submit</button>
+                <button type="submit" className="searchbar searchBtn" onSubmit={handleSubmit}>Submit</button>
             </form>
         </section>
     )

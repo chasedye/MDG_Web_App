@@ -4,26 +4,28 @@
     box-sizing: border-box;
     display: flex;
     align-items: center;
-    background-color: #333333;
-    color: #fff;
+    background-color: var(--mdg-dark-purple);
     justify-content: flex-end;
     padding: 1rem;
-}
-
-.navbar-center {
-    display: flex;
 }
 
 .nav-links {
     display: flex;
     list-style-type: none;
-    margin: 0;
-    padding: 10;
+    margin: 0px;
+    padding: 10px;
+}
+
+
+
+.nav-links button:hover {
+    background-color: var(--mdg-light-purple);
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
+    border: none;
 }
 
 

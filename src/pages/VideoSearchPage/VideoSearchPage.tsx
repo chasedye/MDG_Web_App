@@ -1,7 +1,7 @@
 import type {videoProps} from "../../components/VideoObject/VideoObject"
 import VideoSearchResults from "../../components/VideoSearchResults/VideoSearchResults";
 import SearchBar, { type Query } from "../../components/VideoSearchBar/VideoSearchBar"
-import "./VideoSearchPage.modules.css"
+import styles from "./VideoSearchPage.module.css"
 import { useState } from "react";
 
 
@@ -35,7 +35,7 @@ export default function VideoSearchPage() {
     }
 
     return(
-        <section className="page">
+        <section className={`page ${styles.videoSearchPage}`}>
             <SearchBar onSearch={handleQuery} />
             <VideoSearchResults searchResults={results}/>
         </section>

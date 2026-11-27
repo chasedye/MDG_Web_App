@@ -1,32 +1,32 @@
-import "./NavBar.modules.css"
+import styles from "./NavBar.module.css";
 
 
 const Navbar = () => {
     return (
-        <nav className="navbar">
-            <div className="navbar-center">
+        <nav id="NavBar">
+            <div  className={`navbar ${styles.navbar}`} >
 
-                <ul className="nav-links">
+                <button className={`${styles['nav-links']}`}>
                     <li>
-                        <a className="nav-links" href="/upload">Upload</a>
+                        <a className={`${styles['nav-links']}`} href="/upload">Upload</a>
+                    </li>
+                </button>
+
+                <ul className={`${styles['nav-links']}`}>
+                    <li>
+                        <a className={`${styles['nav-links']}`} href="/search">Search</a>
                     </li>
                 </ul>
 
-                <ul className="nav-links">
+                <ul className={`${styles['nav-links']}`}>
                     <li>
-                        <a className="nav-links" href="/search">Search</a>
+                        <a className={`${styles['nav-links']}`} href="/calendar">Calender</a>
                     </li>
                 </ul>
 
-                <ul className="nav-links">
+                <ul className={`${styles['nav-links']}`}>
                     <li>
-                        <a className="nav-links" href="/calendar">Calender</a>
-                    </li>
-                </ul>
-
-                <ul className="nav-links">
-                    <li>
-                        <a className="nav-links" href="/stats">Gym Stats</a>
+                        <a className={`${styles['nav-links']}`}href="/stats">Gym Stats</a>
                     </li>
                 </ul>
             </div>

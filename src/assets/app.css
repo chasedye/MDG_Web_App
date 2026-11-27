@@ -3,17 +3,25 @@ html, body, #root {
   margin: 0;
 } 
 
-main {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+:root {
+  --mdg-dark-purple: #601c67;
+  --mdg-light-purple: #925798;
+}
+
+.container {
+  display: grid;  
+  grid-template-rows: auto 1fr;
+  min-height: 100%;
+  justify-items: stretch;
 }
 
 .page{
-    flex: 1 1 auto;
-    min-height: 0;
-    overflow-y: auto;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    grid-row: 2;
+}
+
+.navbar {
+  grid-row: 1;
 }
