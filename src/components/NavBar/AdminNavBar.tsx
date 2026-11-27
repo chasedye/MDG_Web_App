@@ -4,33 +4,21 @@ import styles from "./NavBar.module.css";
 
 const Navbar = () => {
     return (
-        <nav id="NavBar">
-            <div  className={`navbar ${styles.navbar}`} >
-
-                <ul >
-                    <li>
-                        <NavLink to="/upload" className={`${styles['nav-links']}`} >Upload</NavLink>
-                    </li>
-                </ul>
-
-                <ul>
-                    <li>
-                        <NavLink className={`${styles['nav-links']}`} to="/search">Search</NavLink>
-                    </li>
-                </ul>
-
-                <ul >
-                    <li >
-                        <NavLink className={`${styles['nav-links']}`} to="/calendar">Calender</NavLink>
-                    </li>
-                </ul>
-
-                <ul >
-                    <li >
-                        <NavLink className={`${styles['nav-links']}`} to="/stats">Gym Stats</NavLink>
-                    </li>
-                </ul>
-            </div>
+        <nav id="NavBar" >
+            <ul  >
+                <li>
+                    <NavLink className={({isActive}) => isActive ? styles.active : undefined} to="/upload">Upload</NavLink>
+                </li>
+                <li>
+                    <NavLink className={({isActive}) => isActive ? styles.active : undefined} to="/search">Search</NavLink>
+                </li>
+                <li >
+                    <NavLink className={({isActive}) => isActive ? styles.active : undefined} to="/calendar">Calender</NavLink>
+                </li>
+                <li >
+                    <NavLink className={({isActive}) => isActive ? styles.active : undefined} to="/stats">Gym Stats</NavLink>
+                </li>
+            </ul>
         </nav>
     );
 };
