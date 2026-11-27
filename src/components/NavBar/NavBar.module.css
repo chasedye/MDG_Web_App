@@ -9,27 +9,21 @@
     padding: 1rem;
 }
 
-.nav-links {
+nav ul {
     display: flex;
     list-style-type: none;
     margin: 0px;
     padding: 10px;
 }
 
-.nav-links button {
-    background-color: black;
-    border: 2px solid;
-    border-color: white;
+nav ul li {
+    list-style: none;
 }
 
-.nav-links button:hover {
-    background-color: var(--mdg-light-purple);
-}
-
-.nav-links a {
+nav ul li a {
+    display: block;
     color: white;
     text-decoration: none;
-    border: none;
 }
 
 
