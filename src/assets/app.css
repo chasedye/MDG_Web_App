@@ -19,10 +19,9 @@ html, body, #root {
 
 .page{
     min-height: 0;
-    grid-row: 2;
-    gap: 20px
+    grid-row-start: 2;
 }
 
 .navbar {
-  grid-row: 1;
+  grid-row-start: 1;
 }

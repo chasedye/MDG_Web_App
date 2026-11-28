@@ -1,5 +1,7 @@
 import type { videoProps } from "../VideoObject/VideoObject"
 import VideoObject from "../VideoObject/VideoObject"
+import styles from './VideoSearchResults.module.css'
+
 
 export type VideoResultsProps = {
     searchResults: videoProps[];
@@ -8,22 +10,22 @@ export type VideoResultsProps = {
 export default function VideoSearchResults({searchResults}: VideoResultsProps){
     if (searchResults.length == 0){
         return(
-            <div className="emptyResults">
-                <div className="emptyResultsMessage">
+            <section className={`${styles.resultsSection}`}>
+                <div className={`${styles.noResults}`}>
                     <div className="emptyResultsMessage">No Results</div>
                 </div>
-            </div>
+            </section>
         );
     }
     
     return (
-        <div className="videoSearchResultsBase">
-            < div className="list">
+        <section className={`${styles.resultsSection}`}>
+            < div className={`${styles.results}`}>
                 {searchResults.map(
                     (item, i) => (
                         <VideoObject key={i} {...item} />
                     ))}
             </div>
-        </div>
+        </section>
     );
 }

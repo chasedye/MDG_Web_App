@@ -4,5 +4,6 @@
     display: grid;
     grid-template-rows: auto 1fr;
     box-sizing: border-box;
+    padding-bottom: 50px;
     gap: 40px;
 }

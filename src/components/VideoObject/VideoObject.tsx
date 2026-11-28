@@ -1,5 +1,6 @@
-import "./VideoObject.modules.css";
+import style from "./VideoObject.module.css";
 import VideoPlayerObject from "../VideoPlayer/VideoPlayer"
+import Logo from './../../assets/sampleMDG.png'
 
 export type videoProps = {
         vid_name: string;
@@ -9,14 +10,18 @@ export type videoProps = {
 
 export const VideoObject = (props: videoProps) => {
     return (
-        <div className="videoObject">
-            <div className="videoImage">
-
+        <div className={`${style.videoObject}`}>
+            <div className={`${style.image}`}>
+                <img src={Logo} />
             </div>
-            <div className="videoDetails">
-                <div className="name">{props.vid_name}</div>
-                <div className="desc">{props.vid_description}</div>
-                <div className="date">{props.upload_date}</div>
+            <div className={`${style.nameText}`}>
+                <label>Name: {props.vid_name}</label>
+            </div>
+            <div className={`${style.descText}`}>
+                <label>Description: {props.vid_description}</label>
+            </div>
+            <div className={`${style.dateTextText}`}>
+                <label>Upload Date: {props.upload_date}</label>
             </div>
         </div>
     )
