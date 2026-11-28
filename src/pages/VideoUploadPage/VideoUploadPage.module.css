@@ -1,0 +1,44 @@
+
+.uploadSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-color: var(--mdg-background-off-white);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(red, green, blue, alpha);
+    padding: 10px;
+    gap: 20px;
+    padding-left: 50px;
+}
+
+.fileUpload {
+    display: flex;
+    align-items: center;
+}
+
+.setTitle {
+    display: flex;
+    align-items: center;
+}
+
+.setDescription {
+    display: flex;
+    align-items: center;
+}
+
+.setCategory {
+    display: flex;
+    align-items: center;
+}
+
+.date {
+    display: flex;
+    align-items: center;
+}
+
+.uploadBtn {
+    display: flex;
+    align-items: center;
+}
