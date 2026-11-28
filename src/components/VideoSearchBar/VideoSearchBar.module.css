@@ -1,25 +1,49 @@
 
-section {
-    display: flex;
-    align-items: center;
-    max-height: 3.5rem;
+.searchSection {
+    background-color: var(--background-off-white);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(red, green, blue, alpha);
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .searchBar {
-    background-color: rgb(192, 192, 237);
     display: grid;
     flex: 0 0 auto;
-    grid-template-columns: 5fr 1fr 1fr;
-    max-height: 3.5rem;
-    height: 3.5rem;
+    grid-template-columns: 5fr 2fr auto;
+    grid-template-rows: 1fr;
+    min-height: 3.5rem;
+    gap: 10px; 
     width: 100%;
 }
 
 
 .inputBox {
     grid-column-start: 1;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    justify-content: start;
+    padding: 10px;
+}
+
+.searchLabel {
+    grid-column-start: 1;
     display: flex;
-    background-color: brown;
+    flex: 0 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBox {
+    grid-column-start: 2;
+    flex: 0 0 auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .filter {
@@ -27,6 +51,11 @@ section {
     display: grid;
     flex: 1 0 auto;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    padding: 5px;
 }
 
 .startInput {
@@ -36,10 +65,13 @@ section {
     height: 50%;
 }
 
+.startInput label {
+
+}
+
 .endInput {
     grid-column-start: 2;
     display: flex;
-    background-color: rgb(43, 226, 144);
 }
 
 .searchBtn {
@@ -47,4 +79,22 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    background-color: var(--background-off-white);
+    padding: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    box-shadow: 0 2px 6px rgba(red, green, blue, alpha);
+}
+
+.pickerRoot {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pickerLabel {
+    margin: 0;
+    white-space: nowrap;
 }

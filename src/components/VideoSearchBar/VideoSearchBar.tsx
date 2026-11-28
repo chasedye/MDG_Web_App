@@ -37,17 +37,15 @@ export default function SearchBar({ onSearch } : SearchBarProps) {
     }
 
     return(
-        <section >
+        <section className={`${style.searchSection}`}>
             <form onSubmit={handleSubmit} className={`${style.searchBar}`}>
                 <div className={`${style.inputBox}`}>
-                    <label >
-                        Search by name<input value={searchName} onChange={(e) => setSearchName(e.target.value)} name="searchName" />
-                    </label>
+                    <label className={`${style.searchLabel}`} > Search by name</label>
+                    <input className={`${style.searchBox}`} value={searchName} onChange={(e) => setSearchName(e.target.value)} name="searchName" />
                 </div>
                 <div className={`${style.filter}`}>
-                    <DatePickerInput label="From" clearable value={startDate} onChange={setStartDate} />
-                    <DatePickerInput label="To" clearable value={endDate} onChange={setEndDate} />
-                   
+                    <DatePickerInput label="From" classNames={{ root: style.pickerRoot, label: style.pickerLabel }} clearable value={startDate} onChange={setStartDate} />
+                    <DatePickerInput label="To" classNames={{ root: style.pickerRoot, label: style.pickerLabel }} clearable value={endDate} onChange={setEndDate} />
                 </div>
                 <button type="submit" className={`${style.searchBtn}`} onSubmit={handleSubmit}>Submit</button>
             </form>
